@@ -10,14 +10,17 @@ export default function () {
   return (
     <div>
       {count}
-      {[1,2,3,4].map((item)=>{
-        return(<button
-          onClick={() => {
-            handleClick(item);
-          }}
-        >
-          +{item}
-        </button>)
+      {[1, 2, 3, 4].map((item) => {
+        return (
+          <button
+            onClick={() => {
+              handleClick(item);
+            }}
+            key={item}
+          >
+            +{item}
+          </button>
+        );
       })}
     </div>
   );

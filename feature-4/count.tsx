@@ -1,15 +1,15 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer } from 'react';
 
 export default function () {
-  // const [count, setCount] = useState(0);
-  const [count, dispatch] = useReducer((action) => {
-    switch (action.type) {
+  const [count, dispatch] = useReducer((state, action) => {
+    const { type, payload } = action;
+    switch (type) {
       case 'add':
-        return { count: count + 1 };
+        return state + payload;
+      default:
+        throw new Error('action is not defined');
     }
   }, 0);
-
-  
 
   return (
     <div>
@@ -18,10 +18,11 @@ export default function () {
         return (
           <button
             onClick={() => {
-              dispatch({ type: 'add' });
+              dispatch({ type: 'add', payload: item });
             }}
+            key={item}
           >
-            +{item}Í
+            +{item}
           </button>
         );
       })}

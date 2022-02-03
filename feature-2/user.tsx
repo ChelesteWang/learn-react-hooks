@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function () {
   const defaultUser = {
@@ -7,6 +7,10 @@ export default function () {
     gender: 'man',
   };
   const [user, setUser] = useState(defaultUser);
+
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
 
   return (
     <div>
@@ -21,7 +25,6 @@ export default function () {
             ...user,
             age: user.age + 1,
           });
-          console.log(user);
         }}
       >
         加一岁

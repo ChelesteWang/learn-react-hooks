@@ -1,5 +1,6 @@
-import React from 'react';
+import count from './count';
 
-export default function () {
-  return <div>helloworld</div>;
-}
+import Counter from './count';
+import User from './user';
+
+export { Counter, User };

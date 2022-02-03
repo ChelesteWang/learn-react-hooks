@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Feature1 from './feature-1';
+import Feature2 from './feature-2';
 import './style.css';
 
 interface AppProps {}
@@ -13,7 +14,7 @@ class App extends Component<AppProps, AppState> {
     return (
       <div>
         <Feature1 />
-        <h2>feature-2</h2>
+        <Feature2 />
       </div>
     );
   }

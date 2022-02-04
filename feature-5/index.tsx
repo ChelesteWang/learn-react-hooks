@@ -4,7 +4,7 @@ import Counter from './count';
 export default function () {
   return (
     <div>
-      <h2>feature-4</h2>
+      <h2>feature-5</h2>
       <Counter />
     </div>
   );

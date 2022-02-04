@@ -11,7 +11,7 @@ export default function () {
       case 'mult':
         return state * payload;
       case 'div':
-        return state * payload;
+        return state / payload;
       default:
         throw new Error('action is not defined');
     }
@@ -19,6 +19,7 @@ export default function () {
 
   return (
     <div>
+      {count}
       <button
         onClick={() => {
           dispatch({ type: 'add', payload: 1 });
@@ -26,7 +27,6 @@ export default function () {
       >
         +1
       </button>
-      {count}
       <button
         onClick={() => {
           dispatch({ type: 'sub', payload: 1 });
@@ -36,17 +36,17 @@ export default function () {
       </button>
       <button
         onClick={() => {
-          dispatch({ type: 'mult', payload: 1 });
+          dispatch({ type: 'mult', payload: 2 });
         }}
       >
-        * 1
+        * 2
       </button>
       <button
         onClick={() => {
-          dispatch({ type: 'div', payload: 1 });
+          dispatch({ type: 'div', payload: 2 });
         }}
       >
-        / 1
+        / 2
       </button>
     </div>
   );

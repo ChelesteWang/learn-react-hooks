@@ -6,6 +6,8 @@ export default function () {
     switch (type) {
       case 'add':
         return state + payload;
+      case 'sub':
+        return state - payload;
       default:
         throw new Error('action is not defined');
     }
@@ -13,7 +15,6 @@ export default function () {
 
   return (
     <div>
-      {count}
       {[1, 2, 3, 4].map((item) => {
         return (
           <button
@@ -23,6 +24,19 @@ export default function () {
             key={item}
           >
             +{item}
+          </button>
+        );
+      })}
+      {count}
+      {[1, 2, 3, 4].map((item) => {
+        return (
+          <button
+            onClick={() => {
+              dispatch({ type: 'sub', payload: item });
+            }}
+            key={item}
+          >
+            -{item}
           </button>
         );
       })}

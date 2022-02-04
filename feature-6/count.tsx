@@ -6,7 +6,7 @@ export default function () {
   useEffect(() => {
     const timmer = setTimeout(() => {
       setCount(() => count + 1);
-    }, 3000);
+    }, 1000);
     return () => clearTimeout(timmer);
   });
 

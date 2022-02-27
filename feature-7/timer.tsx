@@ -2,12 +2,12 @@ import Store from './useCount';
 import React from 'react';
 
 const Timer = () => {
-  const store = Store.useContainer();
+  const { count, decrement, increment } = Store.useContainer();
   return (
     <div>
-      <button onClick={store.decrement}>-</button>
-      <span>{store.count}</span>
-      <button onClick={store.increment}>+</button>
+      <button onClick={decrement}>-</button>
+      <span>{count}</span>
+      <button onClick={increment}>+</button>
     </div>
   );
 };

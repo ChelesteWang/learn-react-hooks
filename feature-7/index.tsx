@@ -1,4 +1,6 @@
-import React = require('react');
+import { useState } from 'react';
+import React from 'react'
+import createContainer from './createContainer';
 
 const Timer = (props) => {
   const { increment, count, decrement } = props;
@@ -12,7 +14,7 @@ const Timer = (props) => {
 };
 
 export default function () {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = useState(0);
   const increment = () => setCount(count + 1);
   const decrement = () => setCount(count - 1);
 

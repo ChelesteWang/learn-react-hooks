@@ -1,8 +1,9 @@
-import useCount from './useCount';
+import Store from './useCount';
 import React from 'react';
 
 const Timer = () => {
-  const { count, decrement, increment } = useCount.useContainer();
+  const useCount = Store.useContainer;
+  const { count, decrement, increment } = useCount();
   return (
     <div>
       <button onClick={decrement}>-</button>

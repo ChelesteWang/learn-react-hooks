@@ -10,5 +10,9 @@ export default function () {
     return () => clearTimeout(timmer);
   });
 
+  useEffect(() => {
+    console.log(count);
+  }, [count]);
+
   return <div>三秒后+1：{count}</div>;
 }

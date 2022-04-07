@@ -22,9 +22,9 @@ class App extends Component<AppProps, AppState> {
         <Feature2 />
         <Feature3 />
         <Feature4 />
-        <Feature5 />
-        <Feature6 /> */}
-        <Feature7 />
+        <Feature5 />*/}
+        <Feature6 />
+        {/* <Feature7 /> */}
       </div>
     );
   }
